@@ -18,7 +18,7 @@ function onClick() {
     @click="onClick"
     un-h-40px
     un-px-20px
-    un-rounded-99px
+    un-rounded-8px
     un-bg-bg
     un-color-hex-34495e
     un-dark:color-hex-ffffffbf

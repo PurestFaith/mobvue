@@ -50,7 +50,7 @@ export const routes: RouteRecordRaw[] = [
         },
         tabbar: {
           showTabbar: true,
-          icon: "home-o"
+          icon: "apps-o"
         }
       }
     }
@@ -68,125 +68,24 @@ export const routes: RouteRecordRaw[] = [
         },
         tabbar: {
           showTabbar: true,
-          icon: "user-o"
+          icon: "contact-o"
         },
         footer: true
       }
     }
-  }
-]
+  },
+  {
+    path: "/task-order",
+    component: () => import("@/pages/task/task-order.vue"),
+    name: "Task-order",
+    meta: {
+      title: "盘点设备",
+      layout: {
+        navBar: {
+          showNavBar: true,
+          showLeftArrow: true
+        }
 
-/** 示例页面 */
-export const demoRoutes: RouteRecordRaw[] = [
-  {
-    path: "/keep-alive",
-    component: () => import("@/pages/demo/keep-alive.vue"),
-    name: "KeepAlive",
-    meta: {
-      title: "路由缓存",
-      keepAlive: true,
-      layout: {
-        navBar: {
-          showNavBar: true,
-          showLeftArrow: true
-        }
-      }
-    }
-  },
-  {
-    path: "/watermark",
-    component: () => import("@/pages/demo/watermark.vue"),
-    name: "Watermark",
-    meta: {
-      title: "带防御的水印",
-      layout: {
-        navBar: {
-          showNavBar: true,
-          showLeftArrow: true
-        }
-      }
-    }
-  },
-  {
-    path: "/permission",
-    component: () => import("@/pages/demo/permission.vue"),
-    name: "Permission",
-    meta: {
-      title: "按钮级权限",
-      layout: {
-        navBar: {
-          showNavBar: true,
-          showLeftArrow: true
-        }
-      }
-    }
-  },
-  {
-    path: "/no-permission-page",
-    component: () => {},
-    name: "NoPermissionPage",
-    meta: {
-      title: "因无权限而进不去的页面",
-      roles: ["SuperAdmin"]
-    }
-  },
-  {
-    path: "/color",
-    component: () => import("@/pages/demo/color.vue"),
-    name: "Color",
-    meta: {
-      title: "灰色模式、色弱模式",
-      layout: {
-        navBar: {
-          showNavBar: true,
-          showLeftArrow: true
-        }
-      }
-    }
-  },
-  {
-    path: "/i18n",
-    component: () => import("@/pages/demo/i18n.vue"),
-    name: "I18n",
-    meta: {
-      title: "国际化 / i18n",
-      layout: {
-        navBar: {
-          showNavBar: true,
-          showLeftArrow: true
-        }
-      }
-    }
-  }
-]
-
-/** 空示例页面 */
-export const emptyDemoRoutes: RouteRecordRaw[] = [
-  {
-    path: "/markdown",
-    component: () => import("@/pages/demo/markdown.vue"),
-    name: "Markdown",
-    meta: {
-      title: "IT部2025年终盘点",
-      layout: {
-        navBar: {
-          showNavBar: true,
-          showLeftArrow: true
-        }
-      }
-    }
-  },
-  {
-    path: "/chart",
-    component: () => import("@/pages/demo/chart.vue"),
-    name: "Chart",
-    meta: {
-      title: "三车间2023年终盘点",
-      layout: {
-        navBar: {
-          showNavBar: true,
-          showLeftArrow: true
-        }
       }
     }
   }
@@ -195,7 +94,7 @@ export const emptyDemoRoutes: RouteRecordRaw[] = [
 /** 路由实例 */
 export const router = createRouter({
   history: VITE_ROUTER_HISTORY === "hash" ? createWebHashHistory(VITE_PUBLIC_PATH) : createWebHistory(VITE_PUBLIC_PATH),
-  routes: [...systemRoutes, ...routes, ...demoRoutes, ...emptyDemoRoutes]
+  routes: [...systemRoutes, ...routes]
 })
 
 // 注册路由导航守卫

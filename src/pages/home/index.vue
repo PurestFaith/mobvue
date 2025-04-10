@@ -1,8 +1,57 @@
 <script setup lang="ts">
-import { demoRoutes, emptyDemoRoutes, systemRoutes } from "@/router"
 import Description from "@@/components/Description.vue"
+import Card from "./components/Card.vue"
 import Cell from "./components/Cell.vue"
+import Icon from "./components/Icon.vue"
 import Title from "./components/Title.vue"
+
+const taskCodes = reactive([
+  {
+    path: "/task-order",
+    component: () => import("@/pages/task/task-order.vue"),
+    meta: {
+      title: "IT部2025年终盘点"
+    }
+  }
+])
+
+const iconsConfig = reactive([
+  {
+    text: "保养",
+    mater: [{
+      label: "扫码保养",
+      icon: "/src/common/assets/images/scancode3.png"
+    }, {
+      label: "保养工单",
+      icon: "/src/common/assets/images/notepad1.png"
+    }, {
+      label: "保养验证",
+      icon: "/src/common/assets/images/notepad2.png"
+    }]
+  },
+
+  {
+    text: "点检",
+    mater: [{
+      label: "扫码点检",
+      icon: "/src/common/assets/images/scancode3.png"
+    }, {
+      label: "点检清单",
+      icon: "/src/common/assets/images/notepad2.png"
+    }]
+  },
+  {
+    text: "盘点",
+    mater: [{
+      label: "扫码盘点",
+      icon: "/src/common/assets/images/scancode3.png"
+    }, {
+      label: "盘点清单",
+      icon: "/src/common/assets/images/notepad1.png"
+    }]
+  }
+
+])
 </script>
 
 <template>
@@ -11,7 +60,7 @@ import Title from "./components/Title.vue"
     <div un-my-20px>
       <Title text="盘点任务单" />
       <Cell
-        v-for="(route, index) in emptyDemoRoutes"
+        v-for="(route, index) in taskCodes"
         :key="route.path"
         :title="route.meta?.title || ''"
         :path="route.path"
@@ -21,15 +70,13 @@ import Title from "./components/Title.vue"
       </Cell>
     </div>
 
-    <div un-mt-40px>
-      <Title text="示例页面" />
-      <Cell
-        v-for="route in [...demoRoutes, ...systemRoutes]"
-        :key="route.path"
-        :title="route.meta?.title || ''"
-        :path="route.path"
-        un-mt-12px
-      />
+    <div un-my-20px v-for="icons in iconsConfig" :key="icons.text">
+      <Title :text="icons.text" />
+      <Card un-mt-12px>
+        <div un-flex un-flex-wrap>
+          <Icon :label="item.label" :icon="item.icon" v-for="item in icons.mater" :key="item.label" />
+        </div>
+      </Card>
     </div>
   </div>
 </template>
