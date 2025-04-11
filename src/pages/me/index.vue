@@ -1,13 +1,10 @@
 <script setup lang="ts">
 import { useUserStore } from "@/pinia/stores/user"
-import { useDark } from "@@/composables/useDark"
 import faviconUrl from "/favicon.png?url"
 
 const router = useRouter()
 
 const userStore = useUserStore()
-
-const { isDark, changeDark } = useDark()
 
 function onClick() {
   showToast("更多功能，敬请期待 ~")
@@ -35,12 +32,13 @@ function onLogout() {
       </van-cell>
     </van-cell-group>
     <van-cell-group un-mb-8px>
-      <van-cell title="🌗 Dark Mode 黑暗模式" center>
-        <template #right-icon>
-          <van-switch :model-value="isDark" size="min(5.333vw, 40px)" @click="changeDark" />
+      <van-cell title="📚 文档教程" is-link url="https://juejin.cn/column/7472609448201666599" />
+      <van-cell is-link to="/theme">
+        <template #title>
+          <van-icon name="setting" un-mr-2 />
+          <span class="custom-title">设置</span>
         </template>
       </van-cell>
-      <van-cell title="📚 Documentation 文档教程" is-link url="https://juejin.cn/column/7472609448201666599" />
     </van-cell-group>
     <van-button block @click="onLogout" un-b-0px un-rounded-0px>
       退出登录

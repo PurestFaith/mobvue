@@ -4,7 +4,7 @@
       <slot />
     </div>
     <van-button type="primary" to="/" replace>
-      回到首页
+      回到任务中心
     </van-button>
   </div>
 </template>

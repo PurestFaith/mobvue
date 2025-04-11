@@ -73,13 +73,42 @@ export const routes: RouteRecordRaw[] = [
         footer: true
       }
     }
+
+  },
+  {
+    path: "/theme",
+    component: () => import("@/pages/me/theme.vue"),
+    name: "Theme",
+    meta: {
+      title: "主题设置",
+      layout: {
+        navBar: {
+          showNavBar: true,
+          showLeftArrow: true
+        }
+      }
+    }
+  },
+  {
+    path: "/inventory",
+    component: () => import("@/pages/inventory/index.vue"),
+    name: "Inventory",
+    meta: {
+      title: "详情",
+      layout: {
+        navBar: {
+          showNavBar: true,
+          showLeftArrow: true
+        }
+      }
+    }
   },
   {
     path: "/task-order",
     component: () => import("@/pages/task/task-order.vue"),
     name: "Task-order",
     meta: {
-      title: "盘点设备",
+      title: "盘点列表",
       layout: {
         navBar: {
           showNavBar: true,
