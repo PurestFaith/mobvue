@@ -1,4 +1,8 @@
 <script setup lang="ts">
+import notepad1Icon from "@@/assets/images/notepad1.png"
+import notepad2Icon from "@@/assets/images/notepad2.png"
+import scancodeIcon from "@@/assets/images/scancode3.png"
+
 import Description from "@@/components/Description.vue"
 import Card from "./components/Card.vue"
 import Cell from "./components/Cell.vue"
@@ -20,13 +24,13 @@ const iconsConfig = reactive([
     text: "保养",
     mater: [{
       label: "扫码保养",
-      icon: "/src/common/assets/images/scancode3.png"
+      icon: scancodeIcon
     }, {
       label: "保养工单",
-      icon: "/src/common/assets/images/notepad1.png"
+      icon: notepad1Icon
     }, {
       label: "保养验证",
-      icon: "/src/common/assets/images/notepad2.png"
+      icon: notepad2Icon
     }]
   },
 
@@ -34,20 +38,20 @@ const iconsConfig = reactive([
     text: "点检",
     mater: [{
       label: "扫码点检",
-      icon: "/src/common/assets/images/scancode3.png"
+      icon: scancodeIcon
     }, {
       label: "点检清单",
-      icon: "/src/common/assets/images/notepad2.png"
+      icon: notepad2Icon
     }]
   },
   {
     text: "盘点",
     mater: [{
       label: "扫码盘点",
-      icon: "/src/common/assets/images/scancode3.png"
+      icon: scancodeIcon
     }, {
       label: "盘点清单",
-      icon: "/src/common/assets/images/notepad1.png"
+      icon: notepad1Icon
     }]
   }
 
