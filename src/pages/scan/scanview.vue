@@ -18,7 +18,7 @@ function close() {
   })
 }
 
-// // 扫码成功的回调
+// 扫码成功的回调
 function onScanSuccess(qr) {
   scanRes.qr = qr
   close()
@@ -38,6 +38,8 @@ function useCamera() {
         aspectRatio: 1.777778,
         showTorchButtonIfSupported: true
       }
+      console.log("devices", devices)
+
       if (devices && devices.length) {
         const cameraId = devices[devices.length - 1].id // 后置摄像头，一般最后一个是后置摄像头
         // let cameraId = devices[0].id //前置摄像头
@@ -72,7 +74,7 @@ onMounted(() => {
 <template>
   <div>
     <div @click="close" class="title">
-      设备二维码
+      设备二维码1
     </div>
     <!-- 扫描仪占位符 -->
     <div id="reader" />
