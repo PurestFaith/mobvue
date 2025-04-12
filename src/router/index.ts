@@ -117,6 +117,22 @@ export const routes: RouteRecordRaw[] = [
 
       }
     }
+  },
+  {
+    path: "/scan",
+    component: () => import("@/pages/scan/index.vue"),
+    name: "Scan",
+    meta: {
+      title: "扫码"
+    }
+  },
+  {
+    path: "/scanview",
+    component: () => import("@/pages/scan/scanview.vue"),
+    name: "Scanview",
+    meta: {
+      title: "扫码2"
+    }
   }
 ]
 

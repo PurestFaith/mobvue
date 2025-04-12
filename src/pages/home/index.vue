@@ -56,6 +56,13 @@ const iconsConfig = reactive([
   }
 
 ])
+
+const router = useRouter()
+function goScan() {
+  router.push({
+    path: "/scan"
+  })
+}
 </script>
 
 <template>
@@ -78,7 +85,7 @@ const iconsConfig = reactive([
       <Title :text="icons.text" />
       <Card un-mt-12px>
         <div un-flex un-flex-wrap>
-          <Icon :label="item.label" :icon="item.icon" v-for="item in icons.mater" :key="item.label" />
+          <Icon :label="item.label" @click="goScan" :icon="item.icon" v-for="item in icons.mater" :key="item.label" />
         </div>
       </Card>
     </div>
