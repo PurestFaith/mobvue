@@ -72,7 +72,7 @@ onMounted(() => {
 <template>
   <div>
     <div @click="close" class="title">
-      扫码 X
+      设备二维码
     </div>
     <!-- 扫描仪占位符 -->
     <div id="reader" />
