@@ -3,23 +3,11 @@
   <h1>Mobile + Vue = MobVue</h1>
 </div>
 
-[![github release](https://img.shields.io/github/v/release/un-pany/mobvue?style=flat)](https://github.com/un-pany/mobvue/releases)
-[![github stars](https://img.shields.io/github/stars/un-pany/mobvue?style=flat)](https://github.com/un-pany/mobvue/stargazers)
-[![gitee stars](https://gitee.com/un-pany/mobvue/badge/star.svg)](https://gitee.com/un-pany/mobvue/stargazers)
-
 <b>English | <a href="./README.zh-CN.md">中文</a></b>
 
 ## Introduction
 
 MobVue is a well-crafted mobile web app template, built with popular technologies such as Vue3, Vite, TypeScript, and Vant
-
-## Notifications
-
-> [!NOTE]
-> Powered by love! All source code is free and open-source. If you find it helpful, feel free to give a star to support!
-
-> [!TIP]
-> Paid services are officially launched! If you don’t want to do it yourself but want to remove TS or other modules, try the lazy package! [Click to check it out](https://github.com/un-pany/mobvue/issues/2)
 
 ## Usage
 
@@ -225,11 +213,3 @@ bun run test
 **UnoCSS**: A high-performance, flexible atomic CSS engine
 
 **Bun**：A fast JavaScript runtime
-
-## Project Preview Image
-
-![preview](./src/common/assets/images/preview.png)
-
-## License
-
-[MIT](./LICENSE) License © 2025-PRESENT [pany](https://github.com/pany-ang)

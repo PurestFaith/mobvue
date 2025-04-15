@@ -32,7 +32,7 @@ function onLogout() {
       </van-cell>
     </van-cell-group>
     <van-cell-group un-mb-8px>
-      <van-cell title="📚 文档教程" is-link url="https://juejin.cn/column/7472609448201666599" />
+      <van-cell title="📚 文档教程" is-link url="https://juejin.cn/column/7472609448201666599" v-permission="['editor']" />
       <van-cell is-link to="/theme">
         <template #title>
           <van-icon name="setting" un-mr-2 />

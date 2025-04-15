@@ -26,19 +26,17 @@ function onScanSuccess(qr) {
 
 // 使用相机扫码
 function useCamera() {
-  // 实例化，接收元素id作为参数
   html5QrCode = new Html5Qrcode("reader")
   // 获取相机设备
   Html5Qrcode.getCameras()
     .then((devices) => {
       // 扫码配置
       const config = {
-        fps: 10, //  二维码扫描每秒帧数
+        fps: 10, //  扫描每秒帧数
         qrbox: { width: 300, height: 300 }, // UI框的大小
-        aspectRatio: 1.777778,
-        showTorchButtonIfSupported: true
+        aspectRatio: 1.777778, // 摄像头画面的宽高比（16:9）
+        showTorchButtonIfSupported: true // 是否在支持闪光灯的设备上显示闪光灯开关按钮
       }
-      console.log("devices", devices)
 
       if (devices && devices.length) {
         const cameraId = devices[devices.length - 1].id // 后置摄像头，一般最后一个是后置摄像头
@@ -73,7 +71,7 @@ onMounted(() => {
 
 <template>
   <div>
-    <div @click="close" class="title">
+    <div @click="close" class="title" un-text-white un-z-9 un-fixed un-top-0 un-bg-transparent>
       设备二维码1
     </div>
     <!-- 扫描仪占位符 -->
@@ -83,12 +81,7 @@ onMounted(() => {
 
 <style scoped>
 .title {
-  color: #fff;
-  z-index: 9;
-  position: fixed;
-  top: 0;
   left: 50%;
   transform: translateX(-50%);
-  background-color: transparent;
 }
 </style>

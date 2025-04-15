@@ -26,7 +26,7 @@ function go_inventory() {
       <van-swipe-cell :disabled="item.id === 1" v-for="el in 13" :key="el">
         <CardDetail @click="go_inventory" />
         <template #right>
-          <van-button square type="danger" text="删除" un-h-full un-rounded-8px />
+          <van-button un-h-full un-rounded-8px square type="danger" text="删除" />
         </template>
       </van-swipe-cell>
     </van-tab>

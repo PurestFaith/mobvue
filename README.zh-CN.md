@@ -3,23 +3,11 @@
   <h1>Mobile + Vue = MobVue</h1>
 </div>
 
-[![github release](https://img.shields.io/github/v/release/un-pany/mobvue?style=flat)](https://github.com/un-pany/mobvue/releases)
-[![github stars](https://img.shields.io/github/stars/un-pany/mobvue?style=flat)](https://github.com/un-pany/mobvue/stargazers)
-[![gitee stars](https://gitee.com/un-pany/mobvue/badge/star.svg)](https://gitee.com/un-pany/mobvue/stargazers)
-
 <b><a href="./README.md">English</a> | 中文</b>
 
 ## 简介
 
-MobVue 是一个精心制作的移动端 H5 模板，基于 Vue3、Vite、TypeScript、Vant 等主流技术
-
-## 通知
-
-> [!NOTE]
-> 为爱发电！所有源码均免费开源，如果对你有帮助，欢迎点个 Star 支持一下！
-
-> [!TIP]
-> 正式推出付费服务，如果不想自己动手，但想移除 TS 或其他模块？试试懒人套餐！[点击看看](https://github.com/un-pany/mobvue/issues/2)
+一个精心制作的移动端 H5 模板，基于 Vue3、Vite、TypeScript、Vant 等主流技术
 
 ## 使用
 
@@ -168,12 +156,6 @@ bun run test
 
 **国内仓库**：[gitee](https://gitee.com/un-pany/mobvue)
 
-**交流群**：[查看进群方式](https://github.com/un-pany/mobvue/issues/3)
-
-**捐赠**：[请作者喝咖啡](https://github.com/un-pany/mobvue/issues/1)
-
-**发行版 & 更新日志**：[releases](https://github.com/un-pany/mobvue/releases)
-
 ## 特性
 
 🔥 最新的 [语法](https://vuejs.org/api/sfc-script-setup.html)、[配置](./vite.config.ts)、[依赖](./package.json)
@@ -225,11 +207,3 @@ bun run test
 **UnoCSS**：具有高性能且极具灵活性的即时原子化 CSS 引擎
 
 **Bun**：一款快速的 JavaScript 运行时
-
-## 项目预览图
-
-![preview](./src/common/assets/images/preview.png)
-
-## License
-
-[MIT](./LICENSE) License © 2025-PRESENT [pany](https://github.com/pany-ang)

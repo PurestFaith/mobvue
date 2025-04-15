@@ -1,19 +1,18 @@
-<script setup>
+<script setup lang="ts">
 const router = useRouter()
 const route = useRoute()
 
-const datas = ref()
+const queryData = ref()
 
 onMounted(() => {
-  // 页面返回时，拿到扫码结果并处理
-  const { qr, err } = route.query.scanRes || {}
+  const { qr, err } = (route.query.scanRes || {}) as { qr?: string | number, err: string }
   if (qr) {
     // 处理扫码成功结果
     console.log("扫码成功", qr)
-    datas.value = qr
+    queryData.value = qr
   } else if (err) {
     console.log("处理失败", qr)
-    datas.value = qr
+    queryData.value = qr
   }
 })
 
@@ -24,7 +23,7 @@ function useCamera() {
 
 <template>
   <div un-flex un-justify-center un-mt-5>
-    {{ datas }}
+    {{ queryData }}
     <van-button type="primary" @click="useCamera">
       扫描二维码
     </van-button>
